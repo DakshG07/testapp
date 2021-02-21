@@ -10,6 +10,7 @@ from flask import Flask, render_template_string, request, make_response
 import cv2
 import numpy as np
 import datetime
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -166,4 +167,5 @@ def upload():
     
     
 
-#app.run(debug=True, port=5000)
+app.debug = False
+serve(app)
