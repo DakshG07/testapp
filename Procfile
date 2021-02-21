@@ -1,1 +1,1 @@
-web: waitress-serve --port:$PORT main:app --asyncore-use-poll
+web: waitress-serve --port=$PORT main:app --asyncore-use-poll
